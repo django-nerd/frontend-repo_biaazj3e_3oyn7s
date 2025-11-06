@@ -1,28 +1,26 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import DemoSection from './components/DemoSection';
+import HowItWorks from './components/HowItWorks';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-white dark:bg-slate-900">
+      <Navbar />
+      <Hero />
+      <DemoSection />
+      <HowItWorks />
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-12 mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-sm text-slate-600 dark:text-slate-300">© {new Date().getFullYear()} Plan AI — Built for hackathons and investor demos.</p>
+          <div className="flex flex-wrap gap-3">
+            <a href="#demo" className="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-500 text-white">Run Live Demo</a>
+            <a href="#feedback" className="px-4 py-2 rounded-xl border border-slate-200 dark:border-slate-700">Request Pitch</a>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
