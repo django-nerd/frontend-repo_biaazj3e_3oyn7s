@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Github, Sun, Moon, Play, BookOpenText, History, MessageSquare, LogIn } from 'lucide-react';
+import { Github, Sun, Moon, Play, BookOpen, History, MessageSquare, LogIn } from 'lucide-react';
 
 export default function Navbar() {
   const [dark, setDark] = useState(false);
@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700 dark:text-slate-300">
           <a href="#home" className="hover:text-slate-900 dark:hover:text-white transition">Home</a>
           <a href="#demo" className="hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1"><Play size={16}/> Demo</a>
-          <a href="#how" className="hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1"><BookOpenText size={16}/> How It Works</a>
+          <a href="#how" className="hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1"><BookOpen size={16}/> How It Works</a>
           <a href="#cases" className="hover:text-slate-900 dark:hover:text-white transition">Case Studies</a>
           <a href="#history" className="hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1"><History size={16}/> History</a>
           <a href="#feedback" className="hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1"><MessageSquare size={16}/> Feedback</a>
